@@ -1,0 +1,31 @@
+﻿@model Doctor
+<h1>Edit Doctor</h1>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Doctor" asp-action="Index">Back to Doctors</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit Doctor</li>
+    </ol>
+</nav>
+<form method="post">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingId" name="iddoc" value="@Model.DoctorNo" readonly>
+        <label for="floatingId">Id</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingApellido" name="apellido" value="@Model.Apellido">
+        <label for="floatingApellido">Apellido</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingSalario" name="salario" value="@Model.Salario">
+        <label for="floatingSalario">Salario</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingIdHospital" name="cod_hos" value="@Model.HospitalCod">
+        <label for="floatingIdHospital">IdHospital</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingEspecialidad" name="Especialidad" value="@Model.Especialidad">
+        <label for="floatingEspecialidad">Especialidad</label>
+    </div>
+    <button class="btn btn-warning mt-3">Modificar</button>
+</form>

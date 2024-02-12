@@ -1,0 +1,15 @@
+﻿@model Doctor
+@if (Model != null)
+{
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+            @Model.Apellido
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Especialidad: @Model.Especialidad</li>
+            <li class="list-group-item">ID: @Model.DoctorNo</li>
+            <li class="list-group-item">Salario: @Model.Salario</li>
+            <li class="list-group-item">Hospital: @Model.HospitalCod</li>
+        </ul>
+    </div>
+}

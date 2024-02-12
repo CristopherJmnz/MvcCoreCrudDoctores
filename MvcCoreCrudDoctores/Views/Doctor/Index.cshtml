@@ -1,0 +1,34 @@
+﻿@model List<Doctor>
+
+
+<table class="table table-bordered text-center">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Especialidad</th>
+            <th>Hospital</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Doctor doc in Model)
+        {
+            <tr>
+                <td>@doc.Apellido</td>
+                <td>@doc.Especialidad</td>
+                <td>@doc.HospitalCod</td>
+                <td>
+                    @Html.ActionLink("Details","Details","Doctor",new{
+                        id=doc.DoctorNo
+                    }) |
+                    @Html.ActionLink("Edit","Edit","Doctor",new{
+                        id=doc.DoctorNo
+                    }) |
+                    @Html.ActionLink("Delete","Delete","Doctor",new{
+                        id=doc.DoctorNo
+                    })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

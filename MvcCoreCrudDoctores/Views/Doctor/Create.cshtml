@@ -1,0 +1,26 @@
+﻿<h1>New Doctor</h1>
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Doctor" asp-action="Index">Back to Doctors</a></li>
+        <li class="breadcrumb-item active" aria-current="page">New Doctor</li>
+    </ol>
+</nav>
+<form method="post">
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingApellido" name="apellido" >
+        <label for="floatingApellido">Apellido</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingSalario" name="salario" >
+        <label for="floatingSalario">Salario</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingIdHospital" name="HospitalCod" >
+        <label for="floatingIdHospital">IdHospital</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingEspecialidad" name="Especialidad">
+        <label for="floatingEspecialidad">Especialidad</label>
+    </div>
+    <button class="btn btn-warning mt-3">Modificar</button>
+</form>
